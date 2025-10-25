@@ -315,7 +315,7 @@ async def autopilot():
                 LOGS.exception(er)
     if isinstance(chat.photo, ChatPhotoEmpty):
         photo, _ = await download_file(
-            "https://envs.sh/kKI.png ", "channelphoto.png"
+            "https://envs.sh/kKI.png", "channelphoto.png"
         )
         ll = await ultroid_bot.upload_file(photo)
         try:
