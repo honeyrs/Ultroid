@@ -802,7 +802,7 @@ async def in_pm_ans(event):
         ext = None
     if ext in ["img", "jpg", "png"]:
         _type = "photo"
-        mime_type = "image/jpg"
+        mime_type = "image/png"
     elif ext in ["mp4", "mkv", "gif"]:
         mime_type = "video/mp4"
         _type = "gif"
@@ -816,7 +816,7 @@ async def in_pm_ans(event):
                 await event.builder.document(
                     res,
                     title="Inline PmPermit",
-                    description="~ @TeamUltroid",
+                    description="~ @H0NEYSINGH",
                     text=msg_,
                     buttons=buttons,
                     link_preview=False,
@@ -833,7 +833,7 @@ async def in_pm_ans(event):
                 title="Inline PMPermit.",
                 type=_type,
                 text=msg_,
-                description="@TeamUltroid",
+                description="@H0NEYSINGH",
                 include_media=include_media,
                 buttons=buttons,
                 thumb=cont,

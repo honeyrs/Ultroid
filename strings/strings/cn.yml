@@ -20,13 +20,13 @@ autopic_2: "找不到的结果 `{}`"
 autopic_3: "有收藏吗 `{}` 与您的搜索相关 !\n开始自选 !"
 
 # inline
-inline_1: "[Ultroid 帮助](t.me/UltroidSupportChat)\n\n
+inline_1: "[Ultroid 帮助](t.me/HONEYSUPPORT)\n\n
 **帮助菜单 {}.\n\n
 插件 ~ {}**"
-inline_2: "[Ultroid 帮助](t.me/UltroidSupportChat)\n\n
+inline_2: "[Ultroid 帮助](t.me/HONEYSUPPORT)\n\n
 **帮助菜单 {}.\n\n
 附加组件 ~ {}**"
-inline_3: "[Ultroid 帮助](t.me/UltroidSupportChat)\n\n
+inline_3: "[Ultroid 帮助](t.me/HONEYSUPPORT)\n\n
 **帮助菜单 {}.\n\n
 附加组件 ~ {}\n\n
 去添加 `附加组件` var为true的值**"
@@ -94,7 +94,7 @@ chats_2: "`无法删除此聊天`"
 chats_3: "`我不是管理员`"
 chats_4: "#已删除\n已删除 {}"
 chats_5: "你的 [{}]({}) 组已经成为了 Boss!"
-chats_6: "加入 @TeamUltroid"
+chats_6: "加入 @H0NEYSINGH"
 
 # converter
 cvt_1: "回复任一媒体或文件."
@@ -150,7 +150,7 @@ gdrive_1: "`你已经授权过 Google Drive`"
 gdrive_2: "去 [这里](https://console.developers.google.com/flows/enableapi?apiid=drive) 获取你的 `GDRIVE_CLIENT_ID` 和 `GDRIVE_CLIENT_SECRET`\n\n
 发送你的 GDRIVE_CLIENT_ID 和 GDRIVE_CLIENT_SECRET 到这里.\n`GDRIVE_CLIENT_ID GDRIVE_CLIENT_SECRET` 用空格分开."
 gdrive_3: "`错误的 Client Id`"
-gdrive_4: "`发生了一些错误! 再次发送 `/auth`.\n如果发生同样的问题请联系 `@TeamUltroid"
+gdrive_4: "`发生了一些错误! 再次发送 `/auth`.\n如果发生同样的问题请联系 `@H0NEYSINGH"
 gdrive_5: "`成功!\n你已经在 Ultroid 用户机器人 上设置好了 Google Drive.`"
 gdrive_6: "`去 `{}` 并发送 ``/auth.`"
 gdrive_7: "**文件成功上传到 G-Drive :**\n\n[{}]({})"
@@ -263,7 +263,7 @@ help_autoban: "• `{i}autokick <on/off>`\n    on - To enable.\n    off - To dis
 can_2: "∆ #UsernameUpdate\n\n@{} changed username to @{}"
 aki_1: "Game has been Terminated...."
 youtube_8: "`Downloading video song...`"
-help_button: "-\n\n• `{i}button <text with button format`\n   create button u can reply to pic also\n\nFormat:- `{i}button Hey There! @UseUltroid 😎.\n[Ultroid | t.me/theUltroid][Support | t.me/UltroidSupportChat | same]\n[TeamUltroid | t.me/TeamUltroid]`"
+help_button: "-\n\n• `{i}button <text with button format`\n   create button u can reply to pic also\n\nFormat:- `{i}button Hey There! @UseUltroid 😎.\n[Ultroid | t.me/theUltroid][Support | t.me/HONEYSUPPORT | same]\n[TeamUltroid | t.me/TeamUltroid]`"
 bot_1: "Hey,  I am alive."
 youtube_7: "Give me a (youtube) search query to download video from!"
 com_5: "Downloading..."
@@ -550,7 +550,7 @@ fsub_7: "This Message is Not for You"
 clst_1: "`Userbot dyno build in progress, please wait for it to complete.`"
 help_specialtools: "-\n\n• `{i}wspr <username>`\n    Send secret message..\n\n• `{i}q <color-optional>`\n• `{i}q @username`\n• `{i}q r <color-optional>`\n• `{i}q count` : `multiple quotes`\n    Create quotes..\n\n• `{i}sticker <query>`\n    Search Stickers as Per ur Wish..\n\n• `{i}getaudio <reply to an audio>`\n    Download Audio To put in ur Desired Video/Gif.\n\n• `{i}addaudio <reply to Video/gif>`\n    It will put the above audio to the replied video/gif.\n\n• `{i}dob <date of birth>`\n    Put in dd/mm/yy Format only(eg .dob 01/01/1999).\n\n• `{i}wall <query>`\n    Search Hd Wallpaper as Per ur Wish.."
 zip_1: "Reply to any media/Document."
-inline_6: "**Voice Chat Help Menu for {}**\n**Available Commands:** `{}`\n\n@TeamUltroid"
+inline_6: "**Voice Chat Help Menu for {}**\n**Available Commands:** `{}`\n\n@H0NEYSINGH"
 py_d2: "`Full Sudo User Required...`"
 ast_4: "List Of Available Languages."
 py_d8: "`Sending media or sticker is not allowed in this chat.`"

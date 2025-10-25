@@ -109,7 +109,7 @@ def telethon_session():
     except Exception as er:
         print("Unexpected Error Occurred while Creating Session")
         print(er)
-        print("If you think It as a Bug, Report to @UltroidSupportChat.\n\n")
+        print("If you think It as a Bug, Report to @HONEYSUPPORT.\n\n")
 
 
 def pyro_session():
