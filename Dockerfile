@@ -1,29 +1,20 @@
-# -------------------------------------------------
-#  Base image
-# -------------------------------------------------
-FROM python:3.10-slim
+# Ultroid - UserBot
+# Copyright (C) 2021-2025 TeamUltroid
+# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# PLease read the GNU Affero General Public License in <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
-# -------------------------------------------------
-#  System dependencies (git, curl, build tools, libs)
-# -------------------------------------------------
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-        git \
-        curl \
-        wget \
-        build-essential 
+FROM theteamultroid/ultroid:main
 
-# -------------------------------------------------
-#  Upgrade pip & install Python requirements
-# -------------------------------------------------
-WORKDIR /root/TeamUltroid
-COPY . .
+# set timezone
+ENV TZ=Asia/Kolkata
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-# Install the *exact* packages that were reported missing
-RUN pip install --no-cache-dir --upgrade pip
-RUN pip install --no-cache-dir -r requirements.txt
+COPY installer.sh .
 
-# -------------------------------------------------
-#  Entrypoint
-# -------------------------------------------------
-CMD python3 -m pyUltroid
+RUN bash installer.sh
+
+# changing workdir
+WORKDIR "/root/TeamUltroid"
+
+# start the bot.
+CMD ["bash", "startup"]
