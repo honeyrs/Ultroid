@@ -25,14 +25,6 @@ RUN apt-get install -y \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Ensure pip is installed and up-to-date for Python 3.11
-RUN curl -sS https://bootstrap.pypa.io/get-pip.py | python3.11 \
-    && python3.11 -m pip install --upgrade pip
-
-# Verify Python 3.11 is the default python3
-RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1 \
-    && update-alternatives --set python3 /usr/bin/python3.11
-
 # Copy and run installer.sh
 COPY installer.sh .
 RUN bash installer.sh
