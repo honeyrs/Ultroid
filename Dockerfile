@@ -11,8 +11,7 @@ RUN apt-get update && \
         git \
         curl \
         wget \
-        build-essential \
-    rm -rf /var/lib/apt/lists/*
+        build-essential 
 
 # -------------------------------------------------
 #  Upgrade pip & install Python requirements
