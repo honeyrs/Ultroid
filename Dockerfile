@@ -19,7 +19,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     git \
     ffmpeg \
     mediainfo \
-    neofetch \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
