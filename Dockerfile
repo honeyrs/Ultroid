@@ -4,7 +4,7 @@
 # Please read the GNU Affero General Public License in <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
 # Use Python 3.11 slim image as the base
-FROM python:3.11-slim
+FROM python:3.10-slim
 
 # Set timezone to Asia/Kolkata
 ENV TZ=Asia/Kolkata
@@ -41,7 +41,6 @@ RUN pip install --no-cache-dir --upgrade pip && \
     hiredis \
     yt-dlp \
     playwright \
-    pytgcalls \
     av 
 
 # Start the bot
