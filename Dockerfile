@@ -12,15 +12,12 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 # Uninstall the system Python and related packages (if present)
 RUN apt-get remove -y \
     python3 \
-    python3-pip \
     && apt-get autoremove -y \
     && apt-get clean
 
 # Install Python 3.11 and related packages
 RUN apt-get install -y \
     python3.11 \
-    python3.11-venv \
-    python3-pip \
     git \
     curl \
     && rm -rf /var/lib/apt/lists/*
