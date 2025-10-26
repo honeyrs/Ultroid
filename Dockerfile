@@ -4,9 +4,9 @@
 # PLease read the GNU Affero General Public License in <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
 FROM python:3.10.12-slim
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        git
 # set timezone
 ENV TZ=Asia/Kolkata
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
