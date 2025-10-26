@@ -14,6 +14,7 @@ RUN apt-get update && \
 # Set the working directory
 WORKDIR "/root/TeamUltroid"
 COPY . .
-RUN wget -O locals.py https://git.io/JY9UM
-# Optional: Define a command to keep the container running or for your application
-CMD ["python3 locals.py"]
+RUN pip3 install -U -r re*/st*/optional-requirements.txt 
+RUN pip3 install -U -r requirements.txt
+
+CMD ["bash", "startup"]
