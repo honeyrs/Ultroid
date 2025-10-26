@@ -29,7 +29,7 @@ COPY installer.sh .
 RUN chmod +x installer.sh
 
 # Run the installer script with default parameters
-RUN bash installer.sh --no-root
+RUN bash installer.sh
 
 # Install additional dependencies based on environment variables (if set)
 # These will be checked at runtime, but we pre-install common ones
@@ -42,8 +42,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
     yt-dlp \
     playwright \
     pytgcalls \
-    av && \
-    playwright install
+    av 
 
 # Start the bot
 CMD ["bash", "startup"]
