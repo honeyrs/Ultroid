@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     fastfetch \
  && rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/SyntaxAdi/Ultroid /app
+RUN git clone https://github.com/honeyrs/Ultroid /app
 
 WORKDIR /app
 
