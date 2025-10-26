@@ -23,16 +23,7 @@ COPY . .
 
 # Install the *exact* packages that were reported missing
 RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir \
-        Pillow \      # provides cv2 (no GUI)
-        apscheduler \
-        profanitydetector \
-        qrcode[pil] \
-        pytz \
-        twikit \
-        htmlwebshot \
-        yt-dlp \
-        akipy && \
+    pip install --no-cache-dir -r resources/startup/optional-requirements.txt \
     pip install --no-cache-dir -r requirements.txt
 
 # -------------------------------------------------
