@@ -7,6 +7,8 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 # Update package lists and install prerequisites
 RUN apt-get update && apt-get install -y \
     software-properties-common \
+    python3-launchpadlib \
+    ca-certificates \
     && add-apt-repository ppa:deadsnakes/ppa -y \
     && apt-get update
 
