@@ -25,7 +25,6 @@ COPY . .
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir \
         Pillow \      # provides cv2 (no GUI)
-        numpy \             # provides bs4
         apscheduler \
         profanitydetector \
         qrcode[pil] \
