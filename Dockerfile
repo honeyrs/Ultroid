@@ -11,10 +11,7 @@ RUN apt-get update && \
         git \
         curl \
         wget \
-        build-essential \          # needed for compiling some whe
-        libsm6 \
-        libxext6 \
-        libxrender1 \
+        build-essential \ 
         libglib2.0-dev \
         libjpeg-dev \
         zlib1g-dev \
