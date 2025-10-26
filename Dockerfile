@@ -11,15 +11,7 @@ RUN apt-get update && \
         git \
         curl \
         wget \
-        build-essential \ 
-        libglib2.0-dev \
-        libjpeg-dev \
-        zlib1g-dev \
-        libfreetype6-dev \
-        liblcms2-dev \
-        libopenjp2-7-dev \
-        libtiff5-dev \
-        libwebp-dev && \
+        build-essential \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
