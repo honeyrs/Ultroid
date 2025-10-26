@@ -1,47 +1,29 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2025 TeamUltroid
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# Please read the GNU Affero General Public License in <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
-
-# Use Python 3.11 slim image as the base
+# syntax=docker/dockerfile:1.3-labs
 FROM python:3.10-slim
 
-# Set timezone to Asia/Kolkata
 ENV TZ=Asia/Kolkata
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-# Set working directory
-WORKDIR /root/TeamUltroid
-
 # Install system dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    sudo \
+RUN apt-get update && apt-get install -y \
     git \
+    git-lfs \
     ffmpeg \
-    mediainfo \
+    libsm6 \
+    libxext6 \
+    cmake \
+    rsync \
+    libgl1-mesa-glx \
     curl \
-    && rm -rf /var/lib/apt/lists/*
-# Install additional dependencies based on environment variables (if set)
-# These will be checked at runtime, but we pre-install common ones
-RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir \
-    pymongo[srv] \
-    psycopg2-binary \
-    neofetch \
-    redis \
-    hiredis \
-    yt-dlp \
-    playwright \
-    av 
-# Copy the installer script
+    && rm -rf /var/lib/apt/lists/* && \
+    git lfs install
+
 COPY installer.sh .
 
-# Ensure the installer script is executable
-RUN chmod +x installer.sh
-
-# Run the installer script with default parameters
 RUN bash installer.sh
 
 
-# Start the bot
+WORKDIR "/root/TeamUltroid"
+
+# start the bot.
 CMD ["bash", "startup"]
