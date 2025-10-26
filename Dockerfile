@@ -25,8 +25,7 @@ COPY . .
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir \
         Pillow \      # provides cv2 (no GUI)
-        numpy \
-        beautifulsoup4 \             # provides bs4
+        numpy \             # provides bs4
         apscheduler \
         profanitydetector \
         qrcode[pil] \
@@ -34,7 +33,6 @@ RUN pip install --no-cache-dir --upgrade pip && \
         twikit \
         htmlwebshot \
         yt-dlp \
-        google-api-python-client \   # provides apiclient
         akipy && \
     pip install --no-cache-dir -r requirements.txt
 
