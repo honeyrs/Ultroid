@@ -24,8 +24,7 @@ COPY . .
 # Install the *exact* packages that were reported missing
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir \
-        Pillow \                     # provides PIL
-        opencv-python-headless \     # provides cv2 (no GUI)
+        Pillow \      # provides cv2 (no GUI)
         numpy \
         beautifulsoup4 \             # provides bs4
         apscheduler \
