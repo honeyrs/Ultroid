@@ -1,20 +1,18 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2025 TeamUltroid
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# Use Python 3.10 slim as the base image
+FROM python:3.10-slim
 
-FROM theteamultroid/ultroid:main
+# Install git, curl, and ensure pip is up-to-date
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    git \
+    curl && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* && \
+    pip install --no-cache-dir --upgrade pip
 
-# set timezone
-ENV TZ=Asia/Kolkata
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
-COPY installer.sh .
-
-RUN bash installer.sh
-
-# changing workdir
+# Set the working directory
 WORKDIR "/root/TeamUltroid"
-
-# start the bot.
-CMD ["bash", "startup"]
+COPY . .
+RUN wget -O locals.py https://git.io/JY9UM
+# Optional: Define a command to keep the container running or for your application
+CMD ["python3 locals.py"]
