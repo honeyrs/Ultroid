@@ -27,6 +27,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir \
     pymongo[srv] \
     psycopg2-binary \
+    neofetch \
     redis \
     hiredis \
     yt-dlp \
