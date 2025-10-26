@@ -17,7 +17,7 @@ RUN apt-get remove -y \
 
 # Install Python 3.11 and related packages
 RUN apt-get install -y \
-    python3.11 \
+    python3.10 \
     git \
     curl \
     && rm -rf /var/lib/apt/lists/*
