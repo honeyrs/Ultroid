@@ -21,16 +21,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     mediainfo \
     curl \
     && rm -rf /var/lib/apt/lists/*
-
-# Copy the installer script
-COPY installer.sh .
-
-# Ensure the installer script is executable
-RUN chmod +x installer.sh
-
-# Run the installer script with default parameters
-RUN bash installer.sh
-
 # Install additional dependencies based on environment variables (if set)
 # These will be checked at runtime, but we pre-install common ones
 RUN pip install --no-cache-dir --upgrade pip && \
@@ -42,6 +32,15 @@ RUN pip install --no-cache-dir --upgrade pip && \
     yt-dlp \
     playwright \
     av 
+# Copy the installer script
+COPY installer.sh .
+
+# Ensure the installer script is executable
+RUN chmod +x installer.sh
+
+# Run the installer script with default parameters
+RUN bash installer.sh
+
 
 # Start the bot
 CMD ["bash", "startup"]
