@@ -21,7 +21,6 @@ COPY . .
 
 # Install the *exact* packages that were reported missing
 RUN pip install --no-cache-dir --upgrade pip
-RUN pip install --no-cache-dir -r resources/startup/optional-requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 # -------------------------------------------------
