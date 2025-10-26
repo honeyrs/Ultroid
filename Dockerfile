@@ -11,7 +11,7 @@ RUN apt-get update && \
         git \
         curl \
         wget \
-        build-essential \
+        build-essential 
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -23,7 +23,7 @@ COPY . .
 
 # Install the *exact* packages that were reported missing
 RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r resources/startup/optional-requirements.txt \
+    pip install --no-cache-dir -r resources/startup/optional-requirements.txt 
     pip install --no-cache-dir -r requirements.txt
 
 # -------------------------------------------------
