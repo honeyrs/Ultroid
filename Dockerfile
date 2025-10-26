@@ -14,7 +14,6 @@ RUN apt-get update && \
 # Set the working directory
 WORKDIR "/root/TeamUltroid"
 COPY . .
-RUN pip3 install -U -r re*/st*/optional-requirements.txt 
 RUN pip3 install -U -r requirements.txt
 
 CMD ["bash", "startup"]
