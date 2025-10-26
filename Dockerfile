@@ -9,12 +9,6 @@ FROM theteamultroid/ultroid:main
 ENV TZ=Asia/Kolkata
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-# Add deadsnakes PPA to get Python 3.11 (if not available in default repositories)
-RUN apt-get update && apt-get install -y \
-    software-properties-common \
-    && add-apt-repository ppa:deadsnakes/ppa -y \
-    && apt-get update
-
 # Uninstall the system Python and related packages (if present)
 RUN apt-get remove -y \
     python3 \
