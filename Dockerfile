@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Then install
-RUN pip install tgcalls --no-binary tgcalls --no-cache-dir
+RUN pip install pytgcalls --no-binary tgcalls --no-cache-dir
 # changing workdir
 WORKDIR "/root/TeamUltroid"
 
