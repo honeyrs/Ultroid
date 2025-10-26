@@ -26,4 +26,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 # -------------------------------------------------
 #  Entrypoint
 # -------------------------------------------------
-CMD ["bash", "startup"]
+CMD python3 -m pyUltroid
