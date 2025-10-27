@@ -11,7 +11,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  && rm -rf /var/lib/apt/lists/*
 
 RUN git clone https://github.com/honeyrs/Ultroid /app
-RUN pip install --no-cache-dir -r resources/startup/optiona*
 
 WORKDIR /app
 
