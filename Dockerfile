@@ -15,5 +15,5 @@ RUN git clone https://github.com/honeyrs/Ultroid /app
 WORKDIR /app
 
 RUN pip install --no-cache-dir -r requirements.txt
-
+RUN pip install --no-cache-dir -r resources/startup/optiona*
 CMD ["bash", "startup"]
