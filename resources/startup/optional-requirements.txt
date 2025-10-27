@@ -1,7 +1,6 @@
 # Required only for Local Deploys
 # ------------------------------------------------------ #
 
-akipy
 apscheduler
 aiohttp
 bs4
@@ -31,3 +30,4 @@ tgcrypto
 youtube-search-python
 yt-dlp
 # -------------------------------------------------------#
+
